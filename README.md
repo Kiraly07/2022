@@ -3,8 +3,11 @@
 Sau khi sữ dụng lệnh curl -I http://yourdomain.com ta nhận được:
 
 HTTP/1.1 403 Forbidden
+
 Date: Tue, 15 Apr 2025 08:44:43 GMT
+
 Server: Apache/2.4.54 (Debian)
+
 Content-Type: text/html; charset=iso-8859-1
 
 Bạn thấy một mã trạng thái 403 hoặc một số thông báo khác cho thấy bị từ chối quyền truy cập, có thể đó là vì quy tắc .htaccess chặn truy cập.
