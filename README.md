@@ -1,4 +1,4 @@
-#WRITE-UP  DownUnderCTF 2022 -  helicoptering 
+# WRITE-UP  DownUnderCTF 2022 -  helicoptering 
 
 Sau khi sữ dụng lệnh curl -I http://yourdomain.com ta nhận được:
 
